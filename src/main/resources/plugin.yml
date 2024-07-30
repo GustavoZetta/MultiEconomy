@@ -1,0 +1,7 @@
+name: MultiEconomy
+version: '${project.version}'
+main: me.gustavozeta.multieconomy.Main
+api-version: '1.18'
+load: STARTUP
+authors: [GustavoZeta]
+description: Um plugin completo de multi economias
