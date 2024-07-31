@@ -3,7 +3,7 @@
 ### Previsão: 1ª Build ALPHA -> 18/08/2024
 
 # Multi-Economy
-### Mais um plugin de multi economias
+### Um plugin de multi economias
 
 Se quiser arriscar usar este plugin com minha codebase horrível, fique a vontade 👍
 
@@ -22,9 +22,9 @@ Se quiser arriscar usar este plugin com minha codebase horrível, fique a vontad
 - [🔴] Suporte a criação de comandos
     - [🔴] Suporte a criação de argumentos customizaveis para os comandos
     - [🔴] Suporte a criação de comandos com funções customizadas
-- [🔴] 100% Customizavel
-    - [🔴] Mensagens 100% customizaveis
+- [🟠] 100% Customizavel
+    - [🟠] Mensagens 100% customizaveis
     - [🔴] Mensagens de acordo com a linguagem do client do player
-    - [🔴] Logs customizaveis
+    - [🟠] Logs customizaveis
 
 Esse projeto acabou de começar, oq c esperava? huashuashuahus

@@ -10,35 +10,42 @@ import java.util.logging.Logger;
 
 public class FileManager {
     private String getLog(int LogNum) {
-        boolean defaultMessages = false;
-        File file;
-        YamlConfiguration config;
+        File file = null;
+        YamlConfiguration config = null;
+        String prefix = null;
+
         try {
             file = new File(Bukkit.getUpdateFolderFile().getPath(), "mensagens/log.yml");
             config = YamlConfiguration.loadConfiguration(file);
+            prefix = config.getString("prefix");
         } catch (NullPointerException Erro) {
-            Bukkit.getLogger().log(Level.WARNING, "Erro carregando as mensagens do log, usando mensagens padrão do plugin");
-            defaultMessages = true;
+            Bukkit.getLogger().log(Level.WARNING, "Erro carregando as mensagens do log, usando mensagens padrão do plugin (Delete o arquivo para reseta-lo)");
+            prefix = "§c[MultiEconomy]§f";
         }
 
-        if (defaultMessages == false) {
-            switch (LogNum) {
-                case 404: {
-                    try {
-                        return config.getString("");
-                    } catch (NullPointerException Erro) {
-
-                    }
-                }
-                case 405: {
-
-                }
-                case 101: {
-
+        switch (LogNum) {
+            case 404: {
+                try {
+                    String msg = config.getString("arquivo-inexistente").replace('&', '§');
+                    msg.replace("{prefix}", prefix);
+                    return msg;
+                } catch (NullPointerException Erro) {
+                    return prefix + "Erro 404: Arquivo não encontrado";
                 }
             }
+            case 405: {
+                try {
+                    String msg = config.getString("configuracao-inexistente").replace('&', '§');
+                    msg.replace("{prefix}", prefix);
+                    return msg;
+                } catch (NullPointerException Erro) {
+                    return prefix + "Erro 405: Path YAML não encontrado";
+                }
+            }
+            default: {
+                return prefix + "Erro desconhecido, por favor, contate o desenvolvedor do plugin";
+            }
         }
-        return " ";
     }
 
     public void getFile(String filepath) {

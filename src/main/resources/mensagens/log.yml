@@ -1,4 +1,10 @@
-# Essas
+# /////////////////////////////////
+# /                               /
+# /           Mensagens           /
+# /                               /
+# /////////////////////////////////
 
-prefix: "&c[Multi-Economy] &f"
+prefix: "&c[MultiEconomy]&f"
 
+arquivo-inexistente: "{prefix} Erro 404: Arquivo não encontrado"
+configuracao-inexistente: "{prefix} Erro 405: Path YAML não encontrado"
